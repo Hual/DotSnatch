@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="libwebsockets">
+      <UniqueIdentifier>{80e604fa-d0ac-40e3-a761-19a8c7e7a43b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{ccb18863-26b6-4945-822f-bfaed6eeaf68}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="libwebsockets\include\libwebsockets.h">
+      <Filter>libwebsockets</Filter>
+    </ClInclude>
+    <ClInclude Include="CServer.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="CNetworkManager.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerManager.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkCallback.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>server</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="CServer.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="CNetworkManager.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerManager.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkCallback.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
