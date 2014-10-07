@@ -1,5 +1,9 @@
 #include "CServer.h"
 
+#if !defined WIN32 && !defined _WIN32
+	#define Sleep(x) usleep(x*1000)
+#endif
+
 CPlayerManager* CServer::m_pPlayerManager = NULL;
 CNetworkManager* CServer::m_pNetworkManager = NULL;
 
@@ -52,6 +56,6 @@ void CServer::GameLoop()
 		}
 		m_pPlayerManager->BroadcastTickInfo();
 
-		std::this_thread::sleep_for(std::chrono::milliseconds(80));
+		Sleep(80);
 	}
 }

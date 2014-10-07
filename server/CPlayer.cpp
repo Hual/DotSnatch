@@ -20,8 +20,8 @@ void CPlayer::Spawn(unsigned char ucX, unsigned char ucY, unsigned int uiSize)
 
 	for (unsigned int i = 0; i < uiSize; ++i)
 	{
-		m_elements.push_back(SnakeElement{ ucX - i, ucY });
-		pBuf[2 + sizeof(unsigned int)+2 * i] = ucX - i;
+		m_elements.push_back(SnakeElement{ ucX - (unsigned char)i, ucY });
+		pBuf[2 + sizeof(unsigned int)+2 * i] = ucX - (unsigned char)i;
 		pBuf[2 + sizeof(unsigned int)+2 * i + 1] = ucY;
 	}
 

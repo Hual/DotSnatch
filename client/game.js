@@ -247,8 +247,14 @@ function processButtonClick(button)
 		return;
 
 	nickName = document.getElementById('nick').value;
+	var serverAddress = document.getElementById('address').value;
 
-	connection = new WebSocket('ws://37.187.39.141:7777', ['snkmp']);
+	if(serverAddress.length == 0)
+		serverAddress = '37.187.39.141';
+
+	debug(serverAddress);
+
+	connection = new WebSocket('ws://'+serverAddress+':7777', ['snkmp']);
 	connection.binaryType = 'arraybuffer';
 	connection.onopen = onOpen;
 	connection.onclose = onClose;
